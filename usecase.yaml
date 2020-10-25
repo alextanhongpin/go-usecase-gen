@@ -1,0 +1,20 @@
+version: 1
+name: create a new blog account
+related_requirements:
+  - Requirement A.1
+  - Requirement A.2
+goal_in_context: A new existing author requests a new blog account from the Administrator
+preconditions:
+  - The author has appropriate proof of identity.
+successful_end_conditions:
+  - a new blog account is created for the author.
+failed_end_conditions:
+  - The application for a new blog account is rejected.
+primary_actors:
+  - Administrator
+secondary_actors:
+  - Author Credential Database
+trigger:
+  - The administrator asks the CMS to create a new blog account
+main_flow:
+  - The Administrator asks the system to create a new blog
