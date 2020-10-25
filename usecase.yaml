@@ -3,7 +3,8 @@ name: create a new blog account
 related_requirements:
   - Requirement A.1
   - Requirement A.2
-goal_in_context: A new existing author requests a new blog account from the Administrator
+goal_in_context:
+  - A new existing author requests a new blog account from the Administrator
 preconditions:
   - The author has appropriate proof of identity.
 successful_end_conditions:
@@ -17,4 +18,12 @@ secondary_actors:
 trigger:
   - The administrator asks the CMS to create a new blog account
 main_flow:
-  - The Administrator asks the system to create a new blog
+  - 1. The Administrator asks the system to create a new blog
+  - 2. The Administrator selects an account type.
+  - 3. The Administrator enters the author's details.
+  - 4. The author's details are verified using the Author Credential Database.
+  - 5. The new blog account is created.
+  - 6. A summary of the new blog account's details are emailed to the author.
+extensions:
+  - 4.1. The Author Credentials Database does not verify the Author's details.
+  - 4.2. The author's blog account application is rejected.
